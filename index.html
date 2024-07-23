@@ -7,16 +7,22 @@
   <title>Up-Down-3D</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"> </script>
-  <script
-    src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-      component.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
 </head>
 
 <body>
   <a-scene renderer="physicallyCorrectLights: true" shadow="type: pcfsoft">
+    <a-camera position="0 0 4"></a-camera>
+    // Overhead Lights
     <a-light type="directional" light="castShadow:true;" position="-10 10 10" intensity="1"
       shadow-camera-automatic="#mainBox"></a-light>
+    // Ambient Lights
     <a-entity light="type: ambient; color: #fff; intensity: 1"></a-entity>
-
+    // Sky
+    <a-sky color="#ccffff"></a-sky>
+    // Floor
+    <a-entity geometry="primitive: plane" material="color: #aaaaaa; emissiveIntensity: 0" position="0 -1.0625 0"
+      rotation="-90 0 0" scale="10 10 10" shadow=""></a-entity>
 
     // Box
     <a-entity id="mainBox">
@@ -27,58 +33,71 @@
       // Frame
       <a-entity id="box-frame" shadow="receive: false">
         // Front Frame
-        <a-entity geometry="primitive: box" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"
-          shadow="receive: false"></a-entity>
-        <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
+        <a-entity id="frontFrame">
+          <a-entity geometry="primitive: box" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"
+            shadow="receive: false"></a-entity>
+          <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
 
-        <a-entity geometry="primitive: box" material="color: #495057" position="1 0 1"
-          scale="0.125 2.125 0.125"></a-entity>
-        <a-entity geometry="" material="color: #495057" position="0.875 0.125 1" scale="0.125 1.625 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="1 0 1"
+            scale="0.125 2.125 0.125"></a-entity>
+          <a-entity geometry="" material="color: #495057" position="0.875 0.125 1" scale="0.125 1.625 0.125"></a-entity>
 
-        <a-entity geometry="primitive: box" material="color: #495057" position="0 -1 1"
-          scale="2.125 0.125 0.125"></a-entity>
-        <a-entity geometry="" material="color: #495057" position="-0.0625 -0.875 1" scale="1.5 0.125 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="0 -1 1"
+            scale="2.125 0.125 0.125"></a-entity>
+          <a-entity geometry="" material="color: #495057" position="-0.0625 -0.875 1"
+            scale="1.5 0.125 0.125"></a-entity>
 
-        <a-entity geometry="primitive: box" material="color: #495057" position="-1 0 1"
-          scale="0.125 2.125 0.125"></a-entity>
-        <a-entity geometry="" material="color: #495057" position="-0.875 -0.125 1" scale="0.125 1.625 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="-1 0 1"
+            scale="0.125 2.125 0.125"></a-entity>
+          <a-entity geometry="" material="color: #495057" position="-0.875 -0.125 1"
+            scale="0.125 1.625 0.125"></a-entity>
+        </a-entity>
 
         // Right Frame
-        <a-entity geometry="primitive: box" material="color: #495057" position="1 1 0"
-          scale="0.125 0.125 2.125"></a-entity>
-        <a-entity geometry="primitive: box" material="color: #495057" position="1 0 -1"
-          scale="0.125 2.125 0.125"></a-entity>
-        <a-entity geometry="primitive: box" material="color: #495057" position="1 -1 0"
-          scale="0.125 0.125 2.125"></a-entity>
+        <a-entity id="rightFrame">
+          <a-entity geometry="primitive: box" material="color: #495057" position="1 1 0"
+            scale="0.125 0.125 2.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="1 0 -1"
+            scale="0.125 2.125 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="1 -1 0"
+            scale="0.125 0.125 2.125"></a-entity>
+        </a-entity>
 
         // Back Frame
-        <a-entity geometry="primitive: box" material="color: #495057" position="0 1 -1"
-          scale="2.125 0.125 0.125"></a-entity>
-        <a-entity geometry="primitive: box" material="color: #495057" position="-1 0 -1"
-          scale="0.125 2.125 0.125"></a-entity>
-        <a-entity geometry="primitive: box" material="color: #495057" position="0 -1 -1"
-          scale="2.125 0.125 0.125"></a-entity>
+        <a-entity id="backFrame">
+          <a-entity geometry="primitive: box" material="color: #495057" position="0 1 -1"
+            scale="2.125 0.125 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="-1 0 -1"
+            scale="0.125 2.125 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="0 -1 -1"
+            scale="2.125 0.125 0.125"></a-entity>
+        </a-entity>
 
         // Left Frame
-        <a-entity geometry="primitive: box" material="color: #495057" position="-1 1 0"
-          scale="0.125 0.125 2.125"></a-entity>
-        <a-entity geometry="primitive: box" material="color: #495057" position="-1 -1 0"
-          scale="0.125 0.125 2.125"></a-entity>
+        <a-entity id="leftFrame">
+          <a-entity geometry="primitive: box" material="color: #495057" position="-1 1 0"
+            scale="0.125 0.125 2.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #495057" position="-1 -1 0"
+            scale="0.125 0.125 2.125"></a-entity>
+        </a-entity>
       </a-entity>
 
       // Lights
-      <a-entity id="blockLights" shadow="receive: false; cast: false">
-        <a-entity geometry="primitive: box" material="color: #27B1F8; emissive: #27B1F8" position="0 0 1"
-          scale="0.375 0.125 0.125" shadow="cast: false; receive: false"> </a-entity>
-        <a-entity light="type: point; intensity: 0.5; distance: 15; decay: 5; color:    #27B1F8"
-          position="0 0 1.875"></a-entity>
+      <a-entity id="blockLights">
+        <a-entity id="frontLight" shadow="cast: false; receive: false">
+          // Blocks
+          <a-entity geometry="primitive: box" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 1"
+            scale="0.5 0.125 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #27B1F8; emissive: #27B1F8" position="0 0 1"
+            scale="0.75 0.5 0.125"></a-entity>
+          <a-entity geometry="primitive: box" material="color: #27B1F8; emissive: #27B1F8" position="0 -0.3125 1"
+            scale="0.5 0.125 0.125"></a-entity>
+          // Light
+          <a-entity light="color: #27B1F8; decay: 1; distance: 25; intensity: 0.5; type: point"
+            position="0 0 1.125"></a-entity>
+        </a-entity>
       </a-entity>
     </a-entity>
-
-    <a-entity geometry="primitive: plane" material="color: #aaaaaa; emissiveIntensity: 0" position="0 -1.0625 0"
-      rotation="-90 0 0" scale="10 10 10" shadow=""></a-entity>
-    <a-sky color="#ccffff"></a-sky>
-    <a-camera position="0 0 4"></a-camera>
   </a-scene>
 </body>
 
