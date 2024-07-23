@@ -24,8 +24,8 @@
     <a-entity geometry="primitive: plane" material="color: #aaaaaa; emissiveIntensity: 0" position="0 -1.0625 0"
       rotation="-90 0 0" scale="24 12 1" shadow="cast: false"></a-entity>
 
-    <!-- Center Box -->
-    <a-entity id="mainBox">
+    <!-- Left Box -->
+    <a-entity id="mainBox1" position="-2.125 0 0">
       <!-- Center Box -->
       <a-entity id="boxCenter" geometry="primitive: box" material="metalness: 0.9 color: #000000" position="0 0 0"
         scale="1.875 1.875 1.875" shadow=""></a-entity>
@@ -201,7 +201,7 @@
 
 
     <!-- Right Box-->
-    <a-entity id="mainBoxRight" position="4.25 0 0">
+    <a-entity id="mainBox2" position="2.125 0 0">
       <!-- Center Box -->
       <a-entity id="boxCenter" geometry="" material="metalness: 0.9" position="" scale="1.875 1.875 1.875"
         shadow=""></a-entity>
@@ -357,167 +357,6 @@
             light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
           <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -1 -0.3125"
             scale="0.5 0.125 0.125"></a-entity>
-        </a-entity>
-      </a-entity>
-    </a-entity>
-
-    <!-- Left Box-->
-    <a-entity id="mainBoxLeft" position="-4.25 0 0">
-      <!-- Center Box -->
-      <a-entity id="boxCenter" geometry="" material="metalness: 0.9" position="" scale="1.875 1.875 1.875"
-        shadow=""></a-entity>
-
-      <!-- Frame -->
-      <a-entity id="box-frame" shadow="cast: true; receive: false">
-        <!-- Front Frame -->
-        <a-entity id="frontFrame">
-          <a-entity geometry="" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="1 0 1" scale="0.125 2.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.875 0.125 1" scale="0.125 1.625 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="0 -1 1" scale="2.125 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.0625 -0.875 1"
-            scale="1.5 0.125 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="-1 0 1" scale="0.125 2.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.875 -0.125 1"
-            scale="0.125 1.625 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Right Frame -->
-        <a-entity id="rightFrame">
-          <a-entity geometry="" material="color: #495057" position="1 1 0" scale="0.125 0.125 2.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="1 0.125 -0.875"
-            scale="0.125 1.625 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="1 0 -1" scale="0.125 2.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="1 0.875 -0.0625" scale="0.125 0.125 1.5"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="1 -1 0" scale="0.125 0.125 2.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="1 -0.875 0.0625" scale="0.125 0.125 1.5"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="1 -0.125 0.875"
-            scale="0.125 1.625 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Back Frame -->
-        <a-entity id="backFrame">
-          <a-entity geometry="" material="color: #495057" position="0 1 -1" scale="2.125 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.065 0.875 -1" scale="1.5 0.125 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="-1 0 -1" scale="0.125 2.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.875 0.125 -1"
-            scale="0.125 1.625 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="0 -1 -1" scale="2.125 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.0625 -0.875 -1"
-            scale="1.5 0.125 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="-0.875 -0.125 -1"
-            scale="0.125 1.625 0.125"></a-entity>
-
-        </a-entity>
-
-        <!-- Left Frame -->
-        <a-entity id="leftFrame">
-          <a-entity geometry="" material="color: #495057" position="-1 1 0" scale="0.125 0.125 2.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-1 0.125 -0.875"
-            scale="0.125 1.625 0.125"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="-1 -1 0" scale="0.125 0.125 2.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-1 0.875 -0.0625"
-            scale="0.125 0.125 1.5"></a-entity>
-
-          <a-entity geometry="" material="color: #495057" position="-1 -0.875 0.0625"
-            scale="0.125 0.125 1.5"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-1 -0.125 0.875"
-            scale="0.125 1.625 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Top Frame -->
-        <a-entity id="topFrame">
-          <a-entity geometry="" material="color: #495057" position="0.0625 1 -0.875" scale="1.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.875 1 -0.125"
-            scale="0.125 0.125 1.625"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.0625 1 0.875" scale="1.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.875 1 0.125"
-            scale="0.125 0.125 1.625"></a-entity>
-        </a-entity>
-
-        <!-- Bottom Frame -->
-        <a-entity id="bottomFrame">
-          <a-entity geometry="" material="color: #495057" position="0.0625 -1 -0.875"
-            scale="1.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="0.875 -1 -0.125"
-            scale="0.125 0.125 1.625"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.0625 -1 0.875"
-            scale="1.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #495057" position="-0.875 -1 0.125"
-            scale="0.125 0.125 1.625"></a-entity>
-        </a-entity>
-      </a-entity>
-
-      <!-- Lights -->
-      <a-entity id="blockLights">
-        <!-- Front Light -->
-        <a-entity id="frontLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 1"
-            scale="0.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0 1" scale="0.75 0.5 0.125"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -0.3125 1"
-            scale="0.5 0.125 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Right Light -->
-        <a-entity id="rightLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="1 0.3125 0"
-            scale="0.125 0.125 0.5"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="1 0 0" scale="0.125 0.5 0.75"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="1 -0.3125 0"
-            scale="0.125 0.125 0.5"></a-entity>
-        </a-entity>
-
-        <!-- Back Light -->
-        <a-entity id="backLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 -1"
-            scale="0.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0 -1" scale="0.75 0.5 0.125"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -0.3125 -1"
-            scale="0.5 0.125 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Left Light -->
-        <a-entity id="leftLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="-1 0.3125 0"
-            scale="0.125 0.125 0.5"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="-1 0 0" scale="0.125 0.5 0.75"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="-1 -0.3125 0"
-            scale="0.125 0.125 0.5"></a-entity>
-        </a-entity>
-
-        <!-- Top Light -->
-        <a-entity id="topLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 1 0.3125"
-            scale="0.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 1 0" scale="0.75 0.125 0.5"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 1 -0.3125"
-            scale="0.5 0.125 0.125"></a-entity>
-        </a-entity>
-
-        <!-- Bottom Light -->
-        <a-entity id="bottomLight">
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -1 0.3125"
-            scale="0.5 0.125 0.125"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -1 0" scale="0.75 0.125 0.5"
-            light="color: #27B1F8; decay: 2; distance: 50; intensity: 0.8; type: point"></a-entity>
-          <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 -1 -0.3125"
-            scale="0.5 0.125 0.125" w></a-entity>
         </a-entity>
       </a-entity>
     </a-entity>
@@ -848,9 +687,10 @@
 
 
     <a-entity id="player"
-      animation__jump="property: position; to: 0 2.5 0; dir: alternate; dur: 400; easing: easeInOutExpo; loop: true"
+      animation__jump="property: position; to: -2.125 2.5 0; dir: alternate; dur: 400; easing: easeInOutExpo; loop: true"
       animation__rotate="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
-      shadow="receive: false">
+      shadow="receive: false"
+      position="-2.125 0 0">
       <a-entity id="head" geometry="primitive: cone; segmentsHeight: 1; segmentsRadial: 4" position="0 2.425 0"
         scale="0.375 0.375 0.375" material="color: #91979C"></a-entity>
       <a-entity id="arm" geometry="primitive: cone; segmentsHeight: 1; segmentsRadial: 8" position="0 1.875 0"

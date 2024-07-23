@@ -1,4 +1,4 @@
 # UD3D
 ## Up, Down, 3D
 
-A repo of the A-Frame website
+The source code of my website containing references to Up, Down, Top-down (My Sprig Game). Made with A-Frame and Replit
