@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <a-scene renderer="physicallyCorrectLights: true; precision: mediump" shadow="type: pcfsoft">
-    <a-camera position="0 1.5 8" wasd-controls="fly: true"></a-camera>
+  <a-scene renderer="physicallyCorrectLights: true; precision: mediump" shadow="type: pcf">
+    <a-camera position="0 3 18" wasd-controls="fly: true"></a-camera>
     <!-- Overhead Lights -->
     <a-light type="directional" light="castShadow: true" position="-10 10 10" intensity="1"
       shadow-camera-automatic="#player #mainBlock"></a-light>
@@ -22,7 +22,7 @@
     <a-sky color="#ccffff"></a-sky>
     <!-- Floor -->
     <a-entity geometry="primitive: plane" material="color: #aaaaaa; emissiveIntensity: 0" position="0 -1.0625 0"
-      rotation="-90 0 0" scale="24 12 1" shadow="cast: false"></a-entity>
+      rotation="-90 0 0" scale="24 18 1" shadow="cast: false"></a-entity>
 
     <!-- Center Box -->
     <a-entity id="mainBox">
@@ -31,9 +31,9 @@
         scale="1.875 1.875 1.875" shadow=""></a-entity>
 
       <!--Frame-->
-      <a-entity id="box-frame" shadow="receive: false">
+      <a-entity id="box-frame">
         <!-- Front Frame -->
-        <a-entity id="frontFrame">
+        <a-entity id="frontFrame" shadow="cast: true; receive: false">
           <a-entity geometry="primitive: box" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"></a-entity>
           <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
 
@@ -133,7 +133,7 @@
       </a-entity>
 
       <!-- Lights -->
-      <a-entity id="blockLights" shadow="cast: false; receive: false">
+      <a-entity id="blockLights">
         <!-- Front Light -->
         <a-entity id="frontLight">
           <a-entity geometry="primitive: box" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 1"
@@ -210,9 +210,9 @@
         shadow=""></a-entity>
 
       <!--Frame-->
-      <a-entity id="box-frame" shadow="receive: false">
+      <a-entity id="box-frame">
         <!-- Front Frame -->
-        <a-entity id="frontFrame">
+        <a-entity id="frontFrame" shadow="cast: true; receive: false">
           <a-entity geometry="" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"></a-entity>
           <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
 
@@ -301,7 +301,7 @@
       </a-entity>
 
       <!-- Lights -->
-      <a-entity id="blockLights" shadow="cast: false; receive: false">
+      <a-entity id="blockLights">
         <!-- Front Light -->
         <a-entity id="frontLight">
           <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 1"
@@ -371,9 +371,9 @@
         shadow=""></a-entity>
 
       <!--Frame-->
-      <a-entity id="box-frame" shadow="receive: false">
+      <a-entity id="box-frame">
         <!-- Front Frame -->
-        <a-entity id="frontFrame">
+        <a-entity id="frontFrame" shadow="cast: true; receive: false">
           <a-entity geometry="" material="color: #495057" position="0 1 1" scale="2.125 0.125 0.125"></a-entity>
           <a-entity geometry="" material="color: #495057" position="0.065 0.875 1" scale="1.5 0.125 0.125"></a-entity>
 
@@ -423,7 +423,7 @@
         </a-entity>
 
         <!-- Left Frame -->
-        <a-entity id="leftFrame">
+        <a-entity id="leftFrame" shadow="cast: true; receive: false">
           <a-entity geometry="" material="color: #495057" position="-1 1 0" scale="0.125 0.125 2.125"></a-entity>
           <a-entity geometry="" material="color: #495057" position="-1 0.125 -0.875"
             scale="0.125 1.625 0.125"></a-entity>
@@ -462,7 +462,7 @@
       </a-entity>
 
       <!-- Lights -->
-      <a-entity id="blockLights" shadow="cast: false; receive: false">
+      <a-entity id="blockLights">
         <!-- Front Light -->
         <a-entity id="frontLight">
           <a-entity geometry="" material="color: #27B1F8; emissive: #27B1F8" position="0 0.3125 1"
